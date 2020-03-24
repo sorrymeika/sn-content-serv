@@ -1,0 +1,19 @@
+{
+    "buildCommands": [
+        "rm -rf ./node_modules/sonorpc",
+        "npm install",
+        "ln -s /data/common/sonorpc ./node_modules/sonorpc",
+        "pm2 stop content_service",
+        "pm2 start scripts/start.js --name content_service"
+    ],
+    "autoConfig": [
+        {
+            "template": "start.js",
+            "destFile": "scripts/start.js"
+        },
+        {
+            "template": "config.js",
+            "destFile": "app/config.js"
+        }
+    ]
+}

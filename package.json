@@ -1,0 +1,16 @@
+{
+  "name": "sn-content-serv",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./lib/index",
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  },
+  "dependencies": {
+    "ioredis": "^4.16.0"
+  },
+  "scripts": {
+    "dev": "npx supervisor scripts/start.js",
+    "start": "node scripts/start.js"
+  }
+}
